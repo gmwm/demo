@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .dataset-title {
+            margin-top: 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .sub-heading {
+            text-align: left;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio Demo</h1>
+
+    <!-- Dataset: LJSpeech -->
+    <p class="dataset-title">Dataset: LJSpeech</p>
+
+    <!-- DiffWave Section -->
+    <p class="sub-heading">DiffWave</p>
+    <table>
+        <tr>
+            <th></th>
+            <th>Demo1</th>
+            <th>Demo2</th>
+            <th>Demo3</th>
+            <th>Demo4</th>
+        </tr>
+        <tr>
+            <td>Ground Truth</td>
+            <td><audio controls><source src="LJ/gt/LJ041-0020.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gt/LJ042-0049.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gt/LJ042-0203.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gt/LJ045-0165.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Generated</td>
+            <td><audio controls><source src="LJ/diff/LJ041-0020.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/diff/LJ042-0049.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/diff/LJ042-0203.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/diff/LJ045-0165.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Watermarked</td>
+            <td><audio controls><source src="LJ/diff-W/LJ041-0020.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/diff-W/LJ042-0049.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/diff-W/LJ042-0203.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/diff-W/LJ045-0165.wav" type="audio/wav"></audio></td>
+        </tr>
+    </table>
+
+    <!-- HiFi-GAN Section -->
+    <p class="sub-heading">HiFi-GAN</p>
+    <table>
+        <tr>
+            <th></th>
+            <th>Demo1</th>
+            <th>Demo2</th>
+            <th>Demo3</th>
+            <th>Demo4</th>
+        </tr>
+        <tr>
+            <td>Ground Truth</td>
+            <td><audio controls><source src="LJ/gt/LJ041-0020.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gt/LJ042-0049.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gt/LJ042-0203.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gt/LJ045-0165.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Generated</td>
+            <td><audio controls><source src="LJ/gan/LJ041-0020.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gan/LJ042-0049.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gan/LJ042-0203.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gan/LJ045-0165.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Watermarked</td>
+            <td><audio controls><source src="LJ/gan-W/LJ041-0020.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gan-W/LJ042-0049.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gan-W/LJ042-0203.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="LJ/gan-W/LJ045-0165.wav" type="audio/wav"></audio></td>
+        </tr>
+    </table>
+
+    <!-- Dataset: LibriTTS -->
+    <p class="dataset-title">Dataset: LibriTTS</p>
+    <!-- DiffWave Section -->
+    <p class="sub-heading">DiffWave</p>
+    <table>
+        <tr>
+            <th></th>
+            <th>Demo1</th>
+            <th>Demo2</th>
+            <th>Demo3</th>
+            <th>Demo4</th>
+        </tr>
+        <tr>
+            <td>Ground Truth</td>
+            <td><audio controls><source src="TTS/gt/5639_40744_000002_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gt/5683_32866_000018_000000.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gt/6829_68769_000078_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gt/6829_68771_000035_000000.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Generated</td>
+            <td><audio controls><source src="TTS/diff/5639_40744_000002_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/diff/5683_32866_000018_000000.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/diff/6829_68769_000078_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/diff/6829_68771_000035_000000.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Watermarked</td>
+            <td><audio controls><source src="TTS/diff-W/5639_40744_000002_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/diff-W/5683_32866_000018_000000.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/diff-W/6829_68769_000078_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/diff-W/6829_68771_000035_000000.wav" type="audio/wav"></audio></td>
+        </tr>
+    </table>
+
+    <!-- HiFi-GAN Section -->
+    <p class="sub-heading">HiFi-GAN</p>
+    <table>
+        <tr>
+            <th></th>
+            <th>Demo1</th>
+            <th>Demo2</th>
+            <th>Demo3</th>
+            <th>Demo4</th>
+        </tr>
+        <tr>
+            <td>Ground Truth</td>
+            <td><audio controls><source src="TTS/gt/5639_40744_000002_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gt/5683_32866_000018_000000.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gt/6829_68769_000078_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gt/6829_68771_000035_000000.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Generated</td>
+            <td><audio controls><source src="TTS/gan/5639_40744_000002_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gan/5683_32866_000018_000000.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gan/6829_68769_000078_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gan/6829_68771_000035_000000.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Watermarked</td>
+            <td><audio controls><source src="TTS/gan-W/5639_40744_000002_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gan-W/5683_32866_000018_000000.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gan-W/6829_68769_000078_000001.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="TTS/gan-W/6829_68771_000035_000000.wav" type="audio/wav"></audio></td>
+        </tr>
+    </table>
+
+    <!-- Dataset: LibriSpeech -->
+    <p class="dataset-title">Dataset: LibriSpeech</p>
+        <!-- DiffWave Section -->
+    <p class="sub-heading">DiffWave</p>
+    <table>
+        <tr>
+            <th></th>
+            <th>Demo1</th>
+            <th>Demo2</th>
+            <th>Demo3</th>
+            <th>Demo4</th>
+        </tr>
+        <tr>
+            <td>Ground Truth</td>
+            <td><audio controls><source src="SP/gt/672-122797-0050.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gt/908-31957-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gt/1221-135767-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gt/1320-122617-0003.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Generated</td>
+            <td><audio controls><source src="SP/diff/672-122797-0050.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/diff/908-31957-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/diff/1221-135767-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/diff/1320-122617-0003.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Watermarked</td>
+            <td><audio controls><source src="SP/diff-W/672-122797-0050.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/diff-W/908-31957-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/diff-W/1221-135767-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/diff-W/1320-122617-0003.wav" type="audio/wav"></audio></td>
+        </tr>
+    </table>
+
+    <!-- HiFi-GAN Section -->
+    <p class="sub-heading">HiFi-GAN</p>
+    <table>
+        <tr>
+            <th></th>
+            <th>Demo1</th>
+            <th>Demo2</th>
+            <th>Demo3</th>
+            <th>Demo4</th>
+        </tr>
+        <tr>
+            <td>Ground Truth</td>
+            <td><audio controls><source src="SP/gt/672-122797-0050.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gt/908-31957-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gt/1221-135767-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gt/1320-122617-0003.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Generated</td>
+            <td><audio controls><source src="SP/gan/672-122797-0050.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gan/908-31957-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gan/1221-135767-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gan/1320-122617-0003.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Watermarked</td>
+            <td><audio controls><source src="SP/gan-W/672-122797-0050.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gan-W/908-31957-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gan-W/1221-135767-0024.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="SP/gan-W/1320-122617-0003.wav" type="audio/wav"></audio></td>
+        </tr>
+    </table>
+
+
+
+</body>
+</html>
